@@ -1,6 +1,5 @@
 pipeline {
     agent any 
-
     stages {
         stage('Build') {
             steps {
@@ -24,8 +23,7 @@ pipeline {
                 script {
                     // Delete and start Minikube cluster
                     bat 'minikube delete'
-                    bat 'minikube start'
-                    
+                    bat 'minikube start'                    
                     // Enable the dashboard addon
                     bat 'minikube addons enable dashboard'
                     
